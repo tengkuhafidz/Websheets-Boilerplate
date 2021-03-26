@@ -1,0 +1,9 @@
+{
+	"*.+(js|ts|tsx)": [
+		"eslint",
+		"jest --findRelatedTests"
+	],
+	"**/*.+(js|ts|tsx|json|css|md)": [
+		"prettier --write"
+	]
+}
