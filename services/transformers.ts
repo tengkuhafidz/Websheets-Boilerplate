@@ -4,7 +4,8 @@ export const stringToBoolean = (field: string) => field === 'TRUE'
 export const stringToArray = (field: string) => field?.split(',')
 
 export const transformItemsData = (itemValues: any[]): Item[] => {
-	return itemValues.map(itemValue => ({
+	return itemValues.map((itemValue, index) => ({
+		id: index,
 		title: itemValue[0],
 		tags: stringToArray(itemValue[1]),
 		imageUrl: itemValue[2],

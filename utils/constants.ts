@@ -1,4 +1,5 @@
 export interface Item {
+	id: number
 	title: string
 	tags: string[]
 	imageUrl: string
