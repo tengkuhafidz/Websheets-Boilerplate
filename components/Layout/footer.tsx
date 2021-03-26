@@ -8,7 +8,7 @@ export default function Footer() {
 
 function WebsheetsBranding() {
 	return (
-		<p className="mt-2 font-bold">
+		<p className="mt-2">
 			Powered by{' '}
 			<a
 				href="https://websheets.co"
