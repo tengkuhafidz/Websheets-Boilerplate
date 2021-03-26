@@ -1,7 +1,8 @@
 import {defaultSiteData, Item, SiteData} from '../utils/constants'
 
-export const stringToBoolean = (field: string) => field === 'TRUE'
-export const stringToArray = (field: string) => field?.split(',')
+const stringToBoolean = (field: string) => field === 'TRUE'
+const stringToArray = (field: string) => field?.split(',')
+const toLowercase = (field: string) => field?.toLowerCase()
 
 export const transformItemsData = (itemValues: any[]): Item[] => {
 	return itemValues.map((itemValue, index) => ({
@@ -17,7 +18,7 @@ export const transformItemsData = (itemValues: any[]): Item[] => {
 export const transformSiteData = (siteDataValue: any[]): SiteData => ({
 	// GENERAL
 	logoUrl: siteDataValue[1] || defaultSiteData.logoUrl,
-	themeColor: siteDataValue[2]?.toLowerCase() || defaultSiteData.themeColor,
+	themeColor: toLowercase(siteDataValue[2]) || defaultSiteData.themeColor,
 	darkMode: stringToBoolean(siteDataValue[3]),
 	// NAVBAR
 	navButtonText: siteDataValue[5],
