@@ -30,7 +30,7 @@ export interface SiteData {
 	seoBannerUrl: string
 }
 
-export const defaultSiteData = {
+export const defaultSiteData: SiteData = {
 	// GENERAL
 	logoUrl: "/images/logo.png",
 	themeColor: "green",
