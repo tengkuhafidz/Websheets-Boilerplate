@@ -1,6 +1,6 @@
 import {GetStaticProps} from 'next'
 import React from 'react'
-import ItemsList from '../components/Home/items-list'
+import Home from '../components/Home'
 import Layout from '../components/Layout'
 import {getItems, getSiteData} from '../services/sheet'
 import {SiteDataProvider} from '../utils/SiteDataContext'
@@ -10,7 +10,7 @@ export default function Index({siteData, items}) {
 		<SiteDataProvider value={siteData}>
 			<div className={siteData.darkMode ? 'dark' : ''}>
 				<Layout>
-					<ItemsList items={items} />
+					<Home items={items} />
 				</Layout>
 			</div>
 		</SiteDataProvider>
