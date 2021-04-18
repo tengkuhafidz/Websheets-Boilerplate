@@ -3,7 +3,7 @@ import Fuse from 'fuse.js'
 export const getFuseSearchResult = (
 	items: any[],
 	searchTerm: string,
-	key: string[],
+	keys: string[],
 ): any[] => {
 	const options = {
 		isCaseSensitive: false,
@@ -16,7 +16,7 @@ export const getFuseSearchResult = (
 		threshold: 0.4,
 		location: 0,
 		distance: 100,
-		key,
+		keys,
 	}
 
 	const fuse = new Fuse(items, options)
