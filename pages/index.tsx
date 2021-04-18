@@ -2,28 +2,28 @@ import {GetStaticProps} from 'next'
 import React from 'react'
 import Home from '../components/Home'
 import Layout from '../components/Layout'
-import {getItems, getSiteData} from '../services/sheet'
-import {SiteDataProvider} from '../utils/SiteDataContext'
+import {getItems, getPageData} from '../services/sheet'
+import {PageDataProvider} from '../utils/PageDataContext'
 
-export default function Index({siteData, items}) {
+export default function Index({pageData, items}) {
 	return (
-		<SiteDataProvider value={siteData}>
-			<div className={siteData.darkMode ? 'dark' : ''}>
+		<PageDataProvider value={pageData}>
+			<div className={pageData.darkMode ? 'dark' : ''}>
 				<Layout>
 					<Home items={items} />
 				</Layout>
 			</div>
-		</SiteDataProvider>
+		</PageDataProvider>
 	)
 }
 
 export const getStaticProps: GetStaticProps = async () => {
 	const items = await getItems()
-	const siteData = await getSiteData()
+	const pageData = await getPageData()
 
 	return {
 		props: {
-			siteData,
+			pageData,
 			items,
 		},
 	}

@@ -1,4 +1,4 @@
-import {defaultSiteData, Item, SiteData} from '../utils/constants'
+import {defaultPageData, Item, PageData} from '../utils/constants'
 
 const stringToBoolean = (field: string) => field === 'TRUE'
 const stringToArray = (field: string) => field?.split(',')
@@ -15,26 +15,26 @@ export const transformItemsData = (itemValues: any[]): Item[] => {
 	}))
 }
 
-export const transformSiteData = (siteDataValue: any[]): SiteData => ({
+export const transformPageData = (pageDataValue: any[]): PageData => ({
 	// GENERAL
-	logoUrl: siteDataValue[1] || defaultSiteData.logoUrl,
-	themeColor: toLowercase(siteDataValue[2]) || defaultSiteData.themeColor,
-	darkMode: stringToBoolean(siteDataValue[3]),
+	logoUrl: pageDataValue[1] || defaultPageData.logoUrl,
+	themeColor: toLowercase(pageDataValue[2]) || defaultPageData.themeColor,
+	darkMode: stringToBoolean(pageDataValue[3]),
 	// NAVBAR
-	navButtonText: siteDataValue[5],
-	navButtonUrl: siteDataValue[6],
-	navMenuText: siteDataValue[7],
-	navMenuUrl: siteDataValue[8],
+	navButtonText: pageDataValue[5],
+	navButtonUrl: pageDataValue[6],
+	navMenuText: pageDataValue[7],
+	navMenuUrl: pageDataValue[8],
 	//HERO
-	heroTitle: siteDataValue[10],
-	heroDescription: siteDataValue[11],
+	heroTitle: pageDataValue[10],
+	heroDescription: pageDataValue[11],
 	//FOOTER
-	copyrightText: siteDataValue[13],
-	footerText: siteDataValue[14],
-	footerLinkableText: siteDataValue[15],
-	footerLinkableUrl: siteDataValue[16],
+	copyrightText: pageDataValue[13],
+	footerText: pageDataValue[14],
+	footerLinkableText: pageDataValue[15],
+	footerLinkableUrl: pageDataValue[16],
 	//SEO
-	seoTitle: siteDataValue[18] || defaultSiteData.seoTitle,
-	seoDescription: siteDataValue[19] || defaultSiteData.seoDescription,
-	seoBannerUrl: siteDataValue[20] || defaultSiteData.seoBannerUrl,
+	seoTitle: pageDataValue[18] || defaultPageData.seoTitle,
+	seoDescription: pageDataValue[19] || defaultPageData.seoDescription,
+	seoBannerUrl: pageDataValue[20] || defaultPageData.seoBannerUrl,
 })

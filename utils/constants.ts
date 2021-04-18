@@ -7,7 +7,7 @@ export interface Item {
 	isActive: boolean
 }
 
-export interface SiteData {
+export interface PageData {
 	// GENERAL
 	logoUrl: string
 	themeColor: string
@@ -31,28 +31,29 @@ export interface SiteData {
 	seoBannerUrl: string
 }
 
-export const defaultSiteData: SiteData = {
+export const defaultPageData: PageData = {
 	// GENERAL
-	logoUrl: "/images/logo.png",
-	themeColor: "green",
+	logoUrl: '/images/logo.png',
+	themeColor: 'green',
 	darkMode: false,
 	// NAVBAR
-	navButtonText: "Treat The Dev",
-	navButtonUrl: "https://buymeacoffee.com/sohafidz",
-	navMenuText: "Documentation",
-	navMenuUrl: "https://docs.websheets.co",
+	navButtonText: 'Treat The Dev',
+	navButtonUrl: 'https://buymeacoffee.com/sohafidz',
+	navMenuText: 'Documentation',
+	navMenuUrl: 'https://docs.websheets.co',
 	//HERO
-	heroTitle: "Build websites with just Google Sheets",
-	heroDescription: "This is an open-sourced project that let's you build websites simply by filling in a Google Sheets template. No accounts, no dashboards, no fees!",
+	heroTitle: 'Build websites with just Google Sheets',
+	heroDescription:
+		"This is an open-sourced project that let's you build websites simply by filling in a Google Sheets template. No accounts, no dashboards, no fees!",
 	//FOOTER
-	copyrightText: "© WebSheets 2021",
-	footerText: "This project was developed by",
-	footerLinkableText: "Tengku Hafidz",
-	footerLinkableUrl: "https://tengkuhafidz.com",
+	copyrightText: '© WebSheets 2021',
+	footerText: 'This project was developed by',
+	footerLinkableText: 'Tengku Hafidz',
+	footerLinkableUrl: 'https://tengkuhafidz.com',
 	//SEO
-	seoTitle: "Websheets",
-	seoDescription: "Build websites with just Google Sheets",
-	seoBannerUrl: "/images/banner.png"
+	seoTitle: 'Websheets',
+	seoDescription: 'Build websites with just Google Sheets',
+	seoBannerUrl: '/images/banner.png',
 }
 
 export enum SheetsDimension {

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {SheetsDimension, SHEET_ID, SHEET_KEY} from '../utils/constants'
-import {transformItemsData, transformSiteData} from './transformers'
+import {transformItemsData, transformPageData} from './transformers'
 
 const fetchSheetsData = async (
 	tabName: string,
@@ -18,11 +18,11 @@ export const getItems = async () => {
 	return allItems.filter(item => item.isActive)
 }
 
-export const getSiteData = async () => {
+export const getPageData = async () => {
 	const {data} = await fetchSheetsData(
 		'site',
 		'B1:B21',
 		SheetsDimension.COLUMNS,
 	)
-	return transformSiteData(data.values[0])
+	return transformPageData(data.values[0])
 }
